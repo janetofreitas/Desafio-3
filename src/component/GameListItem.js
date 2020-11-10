@@ -14,7 +14,7 @@ const GameListItem = props => {
         <Image style = {style.avatar} source = {{uri: game.imagem.thumbnail}} />
         <Text style = {style.lineText} key = {jogo}>
         {`${
-                        toUpperFirst(jogo)
+                        toUpperFirst(jogo) 
                     }`}
         </Text>
     </View>
@@ -28,7 +28,7 @@ const  style = StyleSheet.create(
         line: {
             height: 60,
             borderBottomWidth: 1,
-            borderBottomColor: '#bbb',
+            borderBottomColor: '#37276B',
             alignItems: 'center',
             flexDirection: 'row'
 

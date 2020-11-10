@@ -27,7 +27,7 @@ export default class GamePage extends React.Component{
     return(
       <View>
         <GameList games = {this.state.games}
-        onPressItem = {() => {
+        onPressItem = {(game) => {
             this.props.navigation.navigate('Detalhes dos Games',{"game":game})
         }}
         /> 

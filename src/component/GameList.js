@@ -31,7 +31,7 @@ const GameList = props => {
                 <FlatList
                     data={games}
                     renderItem={renderItem}
-                    keyExtractor={(item) => {item.nome.jogo}}
+                    keyExtractor={(item) => {item.nome}}
                     ListHeaderComponent={header}
                     stickyHeaderIndices={[0]}
                 />
@@ -44,18 +44,18 @@ const GameList = props => {
 const style = StyleSheet.create(
     {
         container: {
-            backgroundColor: '#e2f977'
+            backgroundColor: '#9FDEF8'
         },
         headerStyle: {
             flex: 1,
             height: 50,
             width: '100%',
-            backgroundColor: "#e2a977",
+            backgroundColor: "#106F96",
             justifyContent: "center",
             alignItems: 'center'
         },
         titleStyle: {
-            color: '#000',
+            color: 'white',
             fontSize: 20
         }
     }
