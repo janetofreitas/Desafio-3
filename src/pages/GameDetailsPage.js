@@ -1,5 +1,5 @@
 import React from 'react'
-import {View, Text, StyleSheet,Image, SafeAreaView} from 'react-native'
+import {View, ScrollView, Text, StyleSheet,Image, SafeAreaView} from 'react-native'
 
 export default class GameDetailsPage extends React.Component{
     constructor(props){
@@ -16,21 +16,23 @@ export default class GameDetailsPage extends React.Component{
 
     render(){
         return(
-            <View style = {style.container}>
+            <ScrollView style = {style.container}>
                 <SafeAreaView>
                 <Image style = {style.avatar} source = {{uri: this.state.game.imagem.medium}} />
-                <Text style = {style.baseText}>Nome:</Text>
+                <Text style = {style.titleText}>Nome:</Text>
                 <Text style = {style.baseText}>{this.state.game.nome.jogo}</Text>
-                <Text style = {style.baseText}>Sigla:{this.state.game.nome.sigla}</Text>
-                <Text style = {style.baseText}>Publisher:</Text>
+                <Text style = {style.titleText}>Sigla:</Text>
+                <Text style = {style.baseText}>{this.state.game.nome.sigla}</Text>
+                <Text style = {style.titleText}>Publisher:</Text>
                 <Text style = {style.baseText}>{this.state.game.publisher}</Text>
-                <Text style = {style.baseText}>Gênero:{this.state.game.genero}</Text>
-                <Text style = {style.baseText}>Nome:</Text>
-                <Text style = {style.baseText}>Origem:{this.state.game.origem}</Text>
-                <Text style = {style.baseText}>Preço:</Text>
+                <Text style = {style.titleText}>Gênero:</Text>
+                <Text style = {style.baseText}>{this.state.game.genero}</Text>
+                <Text style = {style.titleText}>Origem:</Text>
+                <Text style = {style.baseText}>{this.state.game.origem}</Text>
+                <Text style = {style.titleText}>Preço:</Text>
                 <Text style = {style.baseText}>{this.state.game.preco}</Text>
                 </SafeAreaView>
-                </View>
+                </ScrollView>
         )
     }
 }
@@ -39,7 +41,7 @@ const style = StyleSheet.create(
     {
       container: {
         flex: 1,
-        backgroundColor: '#048259',
+        backgroundColor: '#9FDEF8',
         margin:14
         
         
@@ -53,18 +55,19 @@ const style = StyleSheet.create(
     },
     baseText: {
         fontFamily: "Cochin",
-        fontSize: 30,
+        fontSize: 25,
         textAlign: "center"
         
       },
       titleText: {
-        fontSize: 60,
-        fontWeight: "bold"
+        fontSize: 25,
+        fontWeight: "bold",
+        textAlign: "center"
       },
       avatar: {
         aspectRatio: 1,
         margin: 70,
-        height: 250, //borda redonda
+        height: 250, 
     }
 
     }
