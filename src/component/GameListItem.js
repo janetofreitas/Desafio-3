@@ -37,7 +37,7 @@ const  style = StyleSheet.create(
             aspectRatio: 1,
             marginLeft: 10,
             flex: 1,
-            borderRadius: 50, //borda redonda
+            borderRadius: 50, 
         },
         lineText: {
             fontSize: 20,
